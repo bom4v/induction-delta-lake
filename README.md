@@ -6,8 +6,8 @@ Delta Lake Tutorial
 * [How to install Python virtual environments with Pyenv and `pipenv`](http://github.com/machine-learning-helpers/induction-python/tree/master/installation/virtual-env)
 
 # Overview
-That repository aims to provide a simple working environment
-reproducing the steps given in the
+[That repository](https://github.com/bom4v/induction-delta-lake) aims
+to provide a simple working environment reproducing the steps given in the
 [Delta Lake quickstart guide](https://docs.delta.io/latest/delta-intro.html#quickstart).
 
 # Installation
@@ -96,25 +96,25 @@ $ pyenv install 2.7.15 && pyenv install 3.7.2
 
 * `pip` and `pipenv`:
 ```bash
-$ cd ~/dev/infra/spark-submit-sql
+$ cd ~/dev/infra/induction-delta-lake
 $ pyenv versions
   system
-* 2.7.15 (set by ~/dev/infra/spark-submit-sql/.python-version)
+* 2.7.15 (set by ~/dev/infra/induction-delta-lake/.python-version)
   3.7.2
 $ python --version
 Python 2.7.15
 $ pip install -U pip pipenv
 $ pipenv install
 Creating a virtualenv for this project...
-Pipfile: ~/dev/infra/spark-submit-sql/Pipfile
+Pipfile: ~/dev/infra/induction-delta-lake/Pipfile
 Using ~/.pyenv/versions/2.7.15/bin/python (2.7.15) to create virtualenv...
 ⠇ Creating virtual environment...Using base prefix '~/.pyenv/versions/2.7.15'
-New python executable in ~/.local/share/virtualenvs/spark-submit-sql-nFz46YtK/bin/python
+New python executable in ~/.local/share/virtualenvs/induction-delta-lake-nFz46YtK/bin/python
 Installing setuptools, pip, wheel...
 done.
 Running virtualenv with interpreter ~/.pyenv/versions/2.7.15/bin/python
 ✔ Successfully created virtual environment! 
-Virtualenv location: ~/.local/share/virtualenvs/spark-submit-sql-nFz46YtK
+Virtualenv location: ~/.local/share/virtualenvs/induction-delta-lake-nFz46YtK
 Installing dependencies from Pipfile.lock (d2363d)...
   �   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 2/2 — 00:00:20
 To activate this project's virtualenv, run pipenv shell.
