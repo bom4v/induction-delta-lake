@@ -22,24 +22,39 @@ object DeltaLakeTutorial extends App {
 
   // Create a table
   val dataV0 = spark.range (0, 5)
-  dataV0.write.format("delta").save("/tmp/delta-table")
+
+  // Store the data into Delta Lake
+  dataV0.write
+    .format ("delta")
+    .save ("/tmp/delta-lake/table-5-int.dlk")
 
   // Update the table data
   val dataV1 = spark.range (5, 10)
-  dataV1.write.format("delta").mode("overwrite").save("/tmp/delta-table")
 
-  // Read data
-  val dfLatest = spark.read.format("delta").load("/tmp/delta-table")
+  // Store the updated version of the data into Delta Lake
+  dataV1.write
+    .format ("delta")
+    .mode ("overwrite")
+    .save ("/tmp/delta-lake/table-5-int.dlk")
+
+  // Read (latest version of the) data from Delta Lake
+  val dfLatest = spark.read
+    .format ("delta")
+    .load ("/tmp/delta-lake/table-5-int.dlk")
+
   println ("Latest version of the data:")
   dfLatest.show()
 
-  // Read older versions of data using time travel
-  val dfOlder = spark.read.format("delta").option("versionAsOf", 0).load("/tmp/delta-table")
+  // Read older versions of data from Delta Lake using time travel
+  val dfOlder = spark.read
+    .format ("delta")
+    .option ("versionAsOf", 0)
+    .load ("/tmp/delta-lake/table-5-int.dlk")
+
   println ("Older version of the data:")
   dfOlder.show()
 
   // End of the Spark session
   spark.stop()
 }
-
 

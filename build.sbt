@@ -34,9 +34,9 @@ developers := List(
 
 //useGpg := true
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.11.12"
 
-crossScalaVersions := Seq("2.12.7", "2.12.8")
+crossScalaVersions := Seq("2.11.12", "2.12.8")
 
 checksums in update := Nil
 
@@ -55,10 +55,10 @@ libraryDependencies ++= (version.value match {
     "org.apache.spark" %% "spark-hive" % "2.3.2"
   )
   case v if v.contains("spark2.4") => Seq(
-    "org.apache.spark" %% "spark-core" % "2.4.2",
-    "org.apache.spark" %% "spark-sql" % "2.4.2",
-    "org.apache.spark" %% "spark-mllib" % "2.4.2",
-    "org.apache.spark" %% "spark-hive" % "2.4.2"
+    "org.apache.spark" %% "spark-core" % "2.4.3",
+    "org.apache.spark" %% "spark-sql" % "2.4.3",
+    "org.apache.spark" %% "spark-mllib" % "2.4.3",
+    "org.apache.spark" %% "spark-hive" % "2.4.3"
   )
   case _ => Seq()
 })
