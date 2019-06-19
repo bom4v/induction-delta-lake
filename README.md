@@ -1,6 +1,9 @@
 Delta Lake Tutorial
 ===================
 
+[![Maven Central](https://img.shields.io/maven-central/v/org.bom4v.ti/delta-lake-io_2.11.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.bom4v.ti%22%20AND%20a:%22delta-lake-io_2.11%22)
+[![Javadocs](http://www.javadoc.io/badge/org.apache.camel/apache-camel.svg?color=brightgreen)](https://www.javadoc.io/doc/org.bom4v.ti/delta-tutorial_2.12)
+
 # References
 * [Delta Lake](https://delta.io)
 * [How to install Python virtual environments with Pyenv and `pipenv`](http://github.com/machine-learning-helpers/induction-python/tree/master/installation/virtual-env)
