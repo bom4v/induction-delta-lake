@@ -1,8 +1,8 @@
 Delta Lake Tutorial
 ===================
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.bom4v.ti/delta-lake-io_2.11.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.bom4v.ti%22%20AND%20a:%22delta-lake-io_2.11%22)
-[![Javadocs](http://www.javadoc.io/badge/org.apache.camel/apache-camel.svg?color=brightgreen)](https://www.javadoc.io/doc/org.bom4v.ti/delta-tutorial_2.12)
+[![Maven Central](https://img.shields.io/maven-central/v/org.bom4v.ti/delta-tutorial_2.11.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.bom4v.ti%22%20AND%20a:%22delta-tutorial_2.11%22)
+[![Javadocs](http://www.javadoc.io/badge/org.apache.camel/apache-camel.svg?color=brightgreen)](https://www.javadoc.io/doc/org.bom4v.ti/delta-tutorial_2.11/)
 
 # References
 * [Delta Lake](https://delta.io)
