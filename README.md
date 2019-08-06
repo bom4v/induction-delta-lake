@@ -166,7 +166,7 @@ Alternatively, run a command inside the virtualenv with pipenv run.
 * Download the application JAR artefact from a
   [Maven repository](https://repo1.maven.org/maven2/):
 ```bash
-$ wget https://oss.sonatype.org/content/groups/public/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ wget https://oss.sonatype.org/content/groups/public/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4.jar
 ```
 
 * Create a directory for the Delta Lake (if needed):
@@ -176,7 +176,7 @@ $ mkdir -p /tmp/delta-lake
 
 * Launch the JAR application:
 ```bash
-$ spark-submit --packages io.delta:delta-core_2.11:0.1.0 --master yarn --deploy-mode client --class org.bom4v.ti.DeltaLakeTutorial delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ spark-submit --packages io.delta:delta-core_2.11:0.3.0 --master yarn --deploy-mode client --class org.bom4v.ti.DeltaLakeTutorial delta-tutorial_2.11-0.0.2-spark2.4.jar
 ```
 
 # Contribute to that project
@@ -199,37 +199,37 @@ $ sbt 'set isSnapshot := true' compile package publishM2 publishLocal
 [info] Set current project to delta-tutorial (in build file:~/dev/infra/induction-delta-lake/)
 [success] Total time: 1 s, completed Apr 25, 2019 6:59:10 PM
 [success] Total time: 0 s, completed Apr 25, 2019 6:59:10 PM
-[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4-sources.jar ...
+[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4-sources.jar ...
 [info] Done packaging.
-[info] Wrote ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.pom
+[info] Wrote ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.pom
 [info] Main Scala API documentation to ~/dev/infra/induction-delta-lake/target/scala-2.11/api...
 model contains 5 documentable templates
 [info] Main Scala API documentation successful.
-[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4-javadoc.jar ...
+[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4-javadoc.jar ...
 [info] Done packaging.
-[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4.pom
-[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4.jar
-[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4-sources.jar
-[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4-javadoc.jar
+[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4.pom
+[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4.jar
+[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4-sources.jar
+[info] 	published delta-tutorial_2.11 to file:~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4-javadoc.jar
 [success] Total time: 3 s, completed Apr 25, 2019 6:59:13 PM
-[info] Wrote ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.pom
+[info] Wrote ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.pom
 [info] Main Scala API documentation to ~/dev/infra/induction-delta-lake/target/scala-2.11/api...
 model contains 5 documentable templates
 [info] Main Scala API documentation successful.
-[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4-javadoc.jar ...
+[info] Packaging ~/dev/infra/induction-delta-lake/target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4-javadoc.jar ...
 [info] Done packaging.
-[info] :: delivering :: org.bom4v.ti#delta-tutorial_2.11;0.0.1-spark2.4 :: 0.0.1-spark2.4 :: integration :: Thu Apr 25 18:59:15 EEST 2019
-[info] 	delivering ivy file to ~/dev/infra/induction-delta-lake/target/scala-2.11/ivy-0.0.1-spark2.4.xml
-[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/poms/delta-tutorial_2.11.pom
-[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/jars/delta-tutorial_2.11.jar
-[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/srcs/delta-tutorial_2.11-sources.jar
-[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/docs/delta-tutorial_2.11-javadoc.jar
-[info] 	published ivy to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/ivys/ivy.xml
+[info] :: delivering :: org.bom4v.ti#delta-tutorial_2.11;0.0.2-spark2.4 :: 0.0.2-spark2.4 :: integration :: Thu Apr 25 18:59:15 EEST 2019
+[info] 	delivering ivy file to ~/dev/infra/induction-delta-lake/target/scala-2.11/ivy-0.0.2-spark2.4.xml
+[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/poms/delta-tutorial_2.11.pom
+[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/jars/delta-tutorial_2.11.jar
+[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/srcs/delta-tutorial_2.11-sources.jar
+[info] 	published delta-tutorial_2.11 to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/docs/delta-tutorial_2.11-javadoc.jar
+[info] 	published ivy to ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/ivys/ivy.xml
 [success] Total time: 1 s, completed Apr 25, 2019 6:59:15 PM
 ```
 
 * The above command generates JAR artefacts (mainly
-  `delta-tutorial_2.11-0.0.1-spark2.4.jar`) locally in the project
+  `delta-tutorial_2.11-0.0.2-spark2.4.jar`) locally in the project
   `target` directory, as well as in the Maven and Ivy2 user repositories
   (`~/.m2` and `~/.ivy2` respectively).
 
@@ -239,26 +239,25 @@ model contains 5 documentable templates
 * Check that the artefacts have been produced
   + Locally (`package` command):
 ```bash
-$ ls -laFh target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.jar
--rw-r--r-- 1 user group 5.4K Apr 25 12:16 target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ ls -laFh target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.jar
+-rw-r--r-- 1 user group 5.4K Apr 25 12:16 target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.jar
 ```
 
   + In the local Maven repository (`publishM2` task):
 ```bash
-$ ls -laFh ~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4.jar
--rw-r--r-- 1 user group 5.4K Apr 25 12:16 ~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.1-spark2.4/delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ ls -laFh ~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4.jar
+-rw-r--r-- 1 user group 5.4K Apr 25 12:16 ~/.m2/repository/org/bom4v/ti/delta-tutorial_2.11/0.0.2-spark2.4/delta-tutorial_2.11-0.0.2-spark2.4.jar
 ```
 
   + In the local Ivy2 repository (`publishLocal` task):
 ```bash
-$ ls -laFh ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/jars/delta-tutorial_2.11.jar
--rw-r--r-- 1 user group 5.4K Apr 25 12:16 ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.1-spark2.4/jars/delta-tutorial_2.11.jar
+$ ls -laFh ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/jars/delta-tutorial_2.11.jar
+-rw-r--r-- 1 user group 5.4K Apr 25 12:16 ~/.ivy2/local/org.bom4v.ti/delta-tutorial_2.11/0.0.2-spark2.4/jars/delta-tutorial_2.11.jar
 ```
 
 * Clean any previous data:
 ```bash
-$ mkdir -p /tmp/delta-lake
-$ rm -rf /tmp/delta-lake/table-5-int.dlk
+$ mkdir -p /tmp/delta-lake && rm -rf /tmp/delta-lake/table-5-int.dlk
 ```
 
 * Launch the job in the SBT JVM:
@@ -296,6 +295,45 @@ Older version of the data:
 |  4|
 +---+
 
+...
+
+After conditional merge:
++---+
+| id|
++---+
+| 14|
+|  7|
+|  2|
+|  5|
+|  3|
+| 16|
+| 11|
+|  0|
+| 17|
+|  6|
+| 15|
+| 12|
+|  9|
+|  1|
+| 10|
+|  8|
+| 19|
+| 13|
+|  4|
+| 18|
++---+
+
+History of table updates:
++-------+-------------------+------+--------+---------+--------------------+----+--------+---------+-----------+--------------+-------------+
+|version|          timestamp|userId|userName|operation| operationParameters| job|notebook|clusterId|readVersion|isolationLevel|isBlindAppend|
++-------+-------------------+------+--------+---------+--------------------+----+--------+---------+-----------+--------------+-------------+
+|      4|2019-08-06 13:44:50|  null|    null|    MERGE|[predicate -> (ol...|null|    null|     null|          3|          null|        false|
+|      3|2019-08-06 13:44:36|  null|    null|   DELETE|[predicate -> ["(...|null|    null|     null|          2|          null|        false|
+|      2|2019-08-06 13:44:27|  null|    null|   UPDATE|[predicate -> ((i...|null|    null|     null|          1|          null|        false|
+|      1|2019-08-06 13:44:12|  null|    null|    WRITE|[mode -> Overwrit...|null|    null|     null|          0|          null|        false|
+|      0|2019-08-06 13:44:06|  null|    null|    WRITE|[mode -> ErrorIfE...|null|    null|     null|       null|          null|         true|
++-------+-------------------+------+--------+---------+--------------------+----+--------+---------+-----------+--------------+-------------+
+
 [success] Total time: 29 s, completed Apr 25, 2019 6:50:51 PM
 ```
 
@@ -319,7 +357,8 @@ drwxr-xr-x   6 user  group   192B Apr 25 19:06 _delta_log/
   + In local mode (for instance, on a laptop; that mode may not always work
     on the Spark/Hadoop clusters):
 ```bash
-$ pipenv run spark-submit --packages io.delta:delta-core_2.11:0.1.0 --master local --class org.bom4v.ti.DeltaLakeTutorial target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ mkdir -p /tmp/delta-lake && rm -rf /tmp/delta-lake/table-5-int.dlk
+$ pipenv run spark-submit --packages io.delta:delta-core_2.11:0.3.0 --master local --class org.bom4v.ti.DeltaLakeTutorial target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.jar
 2019-02-18 20:22:46 INFO  SparkContext:54 - Running Spark version 2.4.3
 2019-02-18 20:22:46 INFO  SparkContext:54 - Submitted application: StandaloneQuerylauncher
 ...
@@ -334,7 +373,8 @@ Scala: version 2.11.12
   + In Yarn cluster client mode with the standalone version (that method
     is basically the same as above):
 ```bash
-$ pipenv run spark-submit --packages io.delta:delta-core_2.11:0.1.0 --num-executors 1 --executor-memory 512m --master yarn --deploy-mode client --class org.bom4v.ti.DeltaLakeTutorial target/scala-2.11/delta-tutorial_2.11-0.0.1-spark2.4.jar
+$ mkdir -p /tmp/delta-lake && rm -rf /tmp/delta-lake/table-5-int.dlk
+$ pipenv run spark-submit --packages io.delta:delta-core_2.11:0.3.0 --num-executors 1 --executor-memory 512m --master yarn --deploy-mode client --class org.bom4v.ti.DeltaLakeTutorial target/scala-2.11/delta-tutorial_2.11-0.0.2-spark2.4.jar
 ...
 Spark: 2.4.3
 Scala: version 2.11.12
@@ -343,9 +383,8 @@ Scala: version 2.11.12
 
 * Playing with Python on PySpark:
 ```bash
-$ mkdir -p /tmp/delta-lake
-$ rm -rf /tmp/delta-lake/table-5-int.dlk
-$ pipenv run pyspark --packages io.delta:delta-core_2.11:0.1.0
+$ mkdir -p /tmp/delta-lake && rm -rf /tmp/delta-lake/table-5-int.dlk
+$ pipenv run pyspark --packages io.delta:delta-core_2.11:0.3.0
 Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
 [Clang 10.0.1 (clang-1001.0.46.3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
@@ -355,13 +394,15 @@ The jars for the packages stored in: ~/.ivy2/jars
 io.delta#delta-core_2.11 added as a dependency
 :: resolving dependencies :: org.apache.spark#spark-submit-parent-f030b508-8df1-42f4-a0b8-b0829e11d815;1.0
 	confs: [default]
-	found io.delta#delta-core_2.11;0.1.0 in spark-list
+	found io.delta#delta-core_2.11;0.3.0 in spark-list
 :: resolution report :: resolve 154ms :: artifacts dl 1ms
 	:: modules in use:
-	io.delta#delta-core_2.11;0.1.0 from spark-list in [default]
+	io.delta#delta-core_2.11;0.3.0 from spark-list in [default]
 	---------------------------------------------------------------------
 	|                  |            modules            ||   artifacts   |
 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
 	---------------------------------------------------------------------
 :: retrieving :: org.apache.spark#spark-submit-parent-f030b508-8df1-42f4-a0b8-b0829e11d815
 	confs: [default]

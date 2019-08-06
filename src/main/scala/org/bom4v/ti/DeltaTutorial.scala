@@ -54,6 +54,40 @@ object DeltaLakeTutorial extends App {
   println ("Older version of the data:")
   dfOlder.show()
 
+  // Merge tests
+  val deltaTable = io.delta.tables
+    .DeltaTable
+    .forPath ("/tmp/delta-lake/table-5-int.dlk")
+
+  // Update every even value by adding 100 to it
+  deltaTable.update(
+    condition = org.apache.spark.sql.functions.expr ("id % 2 == 0"),
+    set = Map ("id" -> org.apache.spark.sql.functions.expr ("id + 100")))
+
+  // Delete every even value
+  deltaTable.delete(condition = org.apache.spark.sql.functions.expr ("id % 2 == 0"))
+
+  // Upsert (merge) new data
+  val newData = spark.range(0, 20).as("newData").toDF
+
+  deltaTable.as("oldData")
+    .merge(
+      newData,
+      "oldData.id = newData.id")
+    .whenMatched
+    .update(Map("id" -> org.apache.spark.sql.functions.col("newData.id")))
+    .whenNotMatched
+    .insert(Map("id" -> org.apache.spark.sql.functions.col("newData.id")))
+    .execute()
+
+  println ("After conditional merge:")
+  deltaTable.toDF.show()
+
+  // History
+  val fullHistoryDF = deltaTable.history()
+  println ("History of table updates:")
+  fullHistoryDF.show()
+
   // End of the Spark session
   spark.stop()
 }

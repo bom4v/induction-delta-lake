@@ -6,7 +6,7 @@ organizationName := "Business Object Models for Verticals (BOM4V)"
 
 organizationHomepage := Some(url("http://github.com/bom4v"))
 
-version := "0.0.1-spark2.4"
+version := "0.0.2-spark2.4"
 
 homepage := Some(url("https://github.com/bom4v/induction-data-lake"))
 
@@ -42,9 +42,9 @@ checksums in update := Nil
 
 libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.22.0"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.4.1" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.0" % "test"
 
-libraryDependencies += "io.delta" %% "delta-core" % "0.1.0"
+libraryDependencies += "io.delta" %% "delta-core" % "0.3.0"
 
 // Spark
 libraryDependencies ++= (version.value match {
